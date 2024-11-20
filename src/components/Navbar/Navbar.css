@@ -1,0 +1,88 @@
+/* Styles généraux de la navbar */
+nav {
+  width: 90%;
+  
+    width: 100%; /* Ou définir une largeur maximale pour limiter */
+    max-width: 1200px; /* Limite à 1200px */
+    margin: 0 auto; /* Centre horizontalement si une largeur maximale est définie */
+ 
+  
+  color: #ffffff;
+  padding: 0; /* Retirer le padding pour que la navbar soit collée aux bords */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Utiliser space-between pour espacer le logo à gauche et les éléments à droite */
+  z-index: 10;  
+  background-color:#011538 ; /* Fond transparent par défaut */
+  transition: background-color 0.3s ease, height 0.3s ease; /* Transition fluide pour la couleur et la hauteur */
+  height: 70px; /* Hauteur de la navbar par défaut */
+  margin-top: 10px; /* Décalage léger vers le bas */
+}
+
+/* Quand la navbar a la classe 'scrolled' */
+nav.scrolled {
+  background-color: #011538; /* Fond bleu au défilement */
+  height: 90px; /* Hauteur réduite lors du défilement */
+}
+
+
+/* Style du logo */
+.logo {
+  width: 100px;
+  margin-left: 20px; /* Ajoute un espace avant le logo */
+  margin-bottom: -15px; /* Décale légèrement vers le bas */
+}
+
+/* Liste de navigation */
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: flex-end; /* Aligner les éléments de la navbar à droite */
+  align-items: center; /* Alignement vertical des éléments */
+  width: auto; /* La largeur de la liste doit être ajustée au contenu */
+}
+
+/* Espacement des éléments dans la navbar (sans espace excessif) */
+nav ul li {
+  display: inline-block;
+  margin: 0 15px; /* Espacement entre les éléments (ajustable) */
+  font-size: 16px;
+  cursor: pointer;
+  padding-top: -5px; /* Ajoutez une valeur négative pour monter les éléments */
+}
+
+/* Style pour le lien sous forme de bouton */
+nav ul li a.button-like {
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav ul li a.button-like:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Fond léger au survol */
+}
+
+/* Style pour le bouton Contact */
+nav ul li button.btn {
+  padding: 10px 20px; /* Plus de padding pour le bouton */
+  background-color: #ffffff; /* Fond blanc pour le bouton */
+  border: 1px solid #011538; /* Bordure bleue pour le bouton */
+  color: #011538; /* Texte bleu foncé pour le bouton */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  margin-left: 20px; /* Ajoute de l'espace entre Contact et l'élément précédent */
+  margin-right: 20px; /* Ajoute de l'espace à droite du bouton Contact */
+}
+
+nav ul li button.btn:hover {
+  background-color: #011538; /* Fond bleu foncé au survol */
+  color: #ffffff; /* Texte blanc au survol */
+  border-color: #ffffff; /* Bordure blanche au survol */
+}

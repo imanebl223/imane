@@ -1,0 +1,93 @@
+.expertise-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Permet d'étirer les éléments sur toute la hauteur */
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: auto;
+}
+
+.expertise-image-container {
+    flex: 1;
+    display: flex;
+    align-items: stretch; /* Étend l'image sur toute la hauteur disponible */
+    justify-content: center;
+    margin-right: 30px;
+    padding-left: 20px; /* Ajoute de l'espace à gauche pour éviter que l'image touche la bordure */
+}
+
+.expertise-image {
+    width: auto; /* Permet à l'image de se redimensionner verticalement */
+    height: 100%; /* Remplit toute la hauteur du conteneur */
+    object-fit: cover; /* Garde les proportions tout en remplissant le conteneur */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transform: translateX(0); /* Ajuste légèrement l'image (supprime la translation) */
+}
+
+.expertise-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.expertise-item:first-child {
+    align-self: flex-start; /* Aligne le premier paragraphe en haut */
+}
+
+.expertise-item:last-child {
+    align-self: flex-end; /* Aligne le dernier paragraphe en bas */
+}
+
+.expertise-item {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.expertise-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f8a100;
+    margin-bottom: 10px;
+}
+
+.expertise-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .expertise-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .expertise-image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding-left: 0; /* Supprime le padding à gauche sur les petits écrans */
+    }
+
+    .expertise-image {
+        width: 100%;
+        height: auto;
+        transform: translateX(0); /* Réinitialise le décalage sur mobile */
+    }
+
+    .expertise-heading {
+        font-size: 1.5rem;
+    }
+
+    .expertise-description {
+        font-size: 1rem;
+    }
+}

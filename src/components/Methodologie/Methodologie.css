@@ -1,0 +1,143 @@
+/* Style global pour la section Méthodologie */
+.methodologie-full-page {
+    display: flex;
+    flex-direction: column;
+    height: 60vh; /* Utilisation de toute la hauteur de la page */
+    width: 100vw;  /* Utilisation de toute la largeur de la page */
+    background-color: #011538; /* Assure que le fond est appliqué à toute la page */
+    color: white;
+    margin: 0;
+    padding: 0; /* Suppression du padding */
+    padding-top: 0; /* Assurez-vous que le padding supérieur est à 0 */
+}
+
+/* Section principale avec le titre fixe */
+.top-section {
+    display: flex; /* Disposition en ligne */
+    align-items: center; /* Aligne le contenu au centre verticalement */
+    padding: 10px; /* Réduire le padding pour minimiser la hauteur */
+}
+
+/* Style de la section gauche */
+.left-section {
+    flex: 1; /* Permet à cette section de croître pour occuper l'espace disponible */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #011538; /* Assure que le fond bleu couvre toute cette section */
+}
+
+/* Style des titres */
+h1 {
+    font-size: 2.5rem; /* Réduire la taille du titre pour moins d'impact sur la hauteur */
+    font-weight: 700;
+    margin: 0; /* Supprimer la marge pour minimiser la hauteur */
+}
+
+/* Conteneur pour les statistiques */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0; /* Garder un peu d'espace en bas pour séparer les sections */
+    padding: 20px; /* Ajustez le padding si vous voulez minimiser la hauteur globale */
+    width: 100%;
+    background-color: #011538; /* Applique un fond bleu à cette section aussi */
+}
+
+/* Style pour chaque statistique */
+.stat-item {
+    background-color: rgba(255, 255, 255, 0.2); /* Fond gris clair transparent */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* Description des statistiques */
+.stat-description {
+    display: flex;
+    align-items: center; /* Centrer verticalement l'icône */
+    justify-content: center; /* Centrer horizontalement */
+}
+
+/* Style des icônes */
+.icon {
+    font-size: 3rem; /* Grande taille pour les icônes */
+    margin-bottom: 10px; /* Espacement entre l'icône et le chiffre */
+}
+
+/* Style des chiffres */
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    animation: numberAnimation 0.5s ease; /* Animation de chiffres */
+}
+
+/* Texte des statistiques */
+.stat-text {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #fff;
+}
+
+/* Animation pour les chiffres */
+@keyframes numberAnimation {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
+
+/* Onglets avec un fond transparent */
+.tabs-container {
+    display: flex; /* Disposition horizontale */
+    gap: 10px;
+    margin-left: 20px; /* Espacement entre le titre et les onglets */
+}
+
+/* Boutons d'onglets */
+.tab-button {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond gris clair transparent pour chaque onglet */
+    border: none; /* Supprime le cadre blanc */
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border-radius: 8px; /* Arrondi des coins des boutons */
+}
+
+/* Style des boutons actifs */
+.tab-button.active {
+    background-color: #fff;
+    color: #011538;
+}
+
+/* Hover sur les boutons d'onglets */
+.tab-button:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Fond plus clair au survol */
+}
+
+/* Contenu des onglets */
+.tab-content {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+    margin-top: 20px;
+    max-width: 500px;
+}
+
+/* Nouvelle classe pour la barre */
+.bar {
+    flex: 1; /* Pour que la barre prenne la moitié de l'espace disponible */
+    background-color: #011538; /* Couleur de fond de la barre */
+    display: flex; /* Disposition en ligne */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+}

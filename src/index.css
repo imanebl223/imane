@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Réinitialisation des marges et paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+/* Réinitialisation des marges et paddings par défaut */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Liens */
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Conteneur principal */
+.main-content {
+  width: 100%; /* Prend toute la largeur */
+  height: 100%; /* Prend toute la hauteur */
+  display: flex; /* Permet d'aligner le contenu */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+}
+nav {
+  position: fixed;
+  top: 0; /* Fixe la navbar tout en haut */
+  left: 0;
+  width: 100%; /* Navbar pleine largeur */
+  height: 90px; /* Ajustez la hauteur selon vos besoins */
+  background-color: #011538; /* Couleur de fond */
+  z-index: 10; /* Assurez-vous qu'elle est au-dessus des autres éléments */
+}
+
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px; /* Taille du logo ajustée */
+}
+
+.logo span {
+  color: #f9c834;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Liens de navigation */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px; /* Espacement entre les éléments */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link.active {
+  color: #f9c834; /* Couleur pour l'élément actif */
+}
+
+.nav-link:hover {
+  color: #f9c834; /* Effet au survol */
+}
+
+/* Bouton Contact */
+.nav-link.button {
+  padding: 8px 15px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: white;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-link.button:hover {
+  background-color: #f9c834;
+  border-color: #f9c834;
+  color: white;
+}
+
+/* Boutons */
+.btn {
+  background: white;
+  color: #011538;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 1px solid #011538;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #011538;
+  color: white;
+}
+
+/* Section 100% largeur et hauteur */
+.full-width-height {
+  width: 100%;
+  height: 100vh; /* Prend toute la hauteur visible de l'écran */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #011538; /* Exemple de couleur de fond */
+  color: white;
+  text-align: center;
+}
+
+/* En-têtes généraux */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Texte global */
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Pour les tablettes */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 15px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+}
+
+/* Pour les téléphones */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.hero {
+  margin-top: 0; /* Évite tout espace entre la navbar et la section suivante */
+}

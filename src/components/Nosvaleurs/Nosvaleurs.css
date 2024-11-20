@@ -1,0 +1,58 @@
+.values-section {
+    background-color: #f0f4f8; /* Light gray background for contrast */
+    padding: 60px 20px;
+    border-radius: 12px;
+  }
+  
+  .values-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #002d62; /* Dark blue */
+    font-weight: bold;
+  }
+  
+  .values-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between cards */
+  }
+  
+  .value-item {
+    background-color: #ffffff; /* White card */
+    border: 1px solid #d1d5db; /* Light gray border */
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .value-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #002d62; /* Dark blue */
+  }
+  
+  .value-title {
+    color: #002d62; /* Dark blue */
+    margin-bottom: 15px;
+    font-size: 1.5em; /* Reduced from 1.8em */
+    font-weight: 600;
+  }
+  
+  
+  
+  .value-description {
+    color: #4b5563; /* Subtle dark gray */
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  

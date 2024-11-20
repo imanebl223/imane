@@ -1,0 +1,36 @@
+.clients-container {
+    width: 100%;
+    overflow: hidden; /* Cache les logos qui débordent hors de la vue */
+  }
+  
+  .clients {
+    display: flex;
+    gap: 20px; /* Espacement entre les logos */
+    animation: scroll 30s linear infinite; /* Durée d'animation réduite à 30s */
+  }
+  
+  .client-logo {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .client-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Animation pour faire défiler les logos horizontalement */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0); /* Commence avec les 6 premiers logos visibles */
+    }
+    100% {
+      transform: translateX(-4000px); /* Ajustez cette valeur selon le nombre total de logos */
+    }
+  }
+  

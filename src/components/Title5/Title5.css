@@ -1,0 +1,19 @@
+.title {
+    text-align: center;
+    color: #212EA0; /* Couleur bleue */
+    font-size: 30px;
+    font-weight: bold; /* Texte en gras */
+    text-transform: uppercase;
+    margin: 70px 0 30px;
+    position: relative; /* Pour positionner le tiret */
+
+}
+
+.title::after {
+    content: ""; /* Créer un élément après le texte */
+    display: block; /* Pour s'assurer qu'il occupe une nouvelle ligne */
+    width: 7%; /* Largeur du tiret, ajustez selon vos besoins */
+    height: 5px; /* Épaisseur du tiret */
+    background-color: rgb(255, 174, 0); /* Couleur du tiret (jaune) */
+    margin: 10px auto 0; /* Marges autour du tiret */
+}

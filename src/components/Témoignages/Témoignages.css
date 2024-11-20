@@ -1,0 +1,62 @@
+.témoignages-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f0f0f5;
+  }
+  
+  .témoignages-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+    width: 80%;
+  }
+  
+  .témoignage-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .témoignage-name {
+    color: #001f8f;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .témoignage-date {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .témoignage-text {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .stars {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .prev, .next {
+    font-size: 48px;
+    color: #001f8f;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold; /* Texte en gras */
+    padding: 0 40px; /* Espace supplémentaire autour des flèches */
+  }
+  
+  .prev:hover, .next:hover {
+    color: #00104d;
+  }
+  

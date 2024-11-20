@@ -1,0 +1,163 @@
+    /* Navbar principale avec un z-index élevé et sans marges/paddings */
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000; /* Assurez-vous que la navbar a un z-index plus élevé que la barre d'information */
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #fff; /* Couleur de fond de la navbar */
+    }
+
+    /* Section héro ajustée pour éviter la superposition avec la navbar */
+    .hero-about {
+        inline-size: 100%;
+        min-height: 71vh;
+        background: linear-gradient(rgba(1, 21, 56, 0.7), rgba(1, 21, 56, 0.7)), url('../../assets/programs-1.jpg');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        padding: 20px;
+        padding-top: 80px; /* Ajouter un padding top pour éviter que la section soit cachée sous la navbar */
+        transition: background-size 0.3s ease;
+    }
+
+    /* Style des cartes de service */
+    #formation-continue,
+    #accompagnement-consulting,
+    #ingenierie-formation,
+    #recrutement {
+        background-color: #fff;
+        padding: 30px;
+        width: 100%; /* Prend toute la largeur disponible */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-sizing: border-box; /* Assure que les padding sont inclus dans la largeur */
+    }
+
+    /* Effet de survol : élévation et ombre (enlevé pour les détails visibles en permanence) */
+    #formation-continue:hover,
+    #accompagnement-consulting:hover,
+    #ingenierie-formation:hover,
+    #recrutement:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Titre des cartes de service */
+    #formation-continue h2,
+    #accompagnement-consulting h2,
+    #ingenierie-formation h2,
+    #recrutement h2 {
+        font-size: 24px;
+        color: #002f5f;
+        margin-bottom: 10px;
+        text-align: center;
+        position: relative;
+    }
+
+    /* Ligne de soulignement sous le titre */
+    #formation-continue h2::after,
+    #accompagnement-consulting h2::after,
+    #ingenierie-formation h2::after,
+    #recrutement h2::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: #3498db;
+        margin: 10px auto 0;
+    }
+
+    /* Introduction des services */
+    #formation-continue p,
+    #accompagnement-consulting p,
+    #ingenierie-formation p,
+    #recrutement p {
+        font-size: 16px;
+        color: #555;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Liste des détails des services - Affichage permanent */
+    .service-details {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        color: #555;
+        font-size: 14px;
+        display: block; /* Assurez-vous que la liste est toujours visible */
+    }
+
+    .service-details li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 8px;
+    }
+
+    .service-schema {
+        margin-top: 20px;
+        width: 100%; /* Ajustez selon vos besoins */
+        max-width: 600px; /* Limite la taille maximale */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .recrutement-service {
+        padding: 40px;
+        text-align: center;
+        background-color: #f4f7fa;
+      }
+      
+      .recrutement-steps {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+      }
+      
+      .recrutement-step {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+      }
+      
+      .step-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #3498db;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      
+      .step-text h4 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+      }
+      
+      /* Lignes de connexion entre les étapes */
+      .recrutement-steps .recrutement-step:not(:last-child)::after {
+        content: '';
+        width: 40px;
+        height: 2px;
+        background-color: #3498db;
+        margin-left: 10px;
+      }
+      
+      

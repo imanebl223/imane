@@ -1,0 +1,145 @@
+.service-section {
+    display: flex;
+    align-items: stretch;
+    padding: 40px 0;
+    margin-bottom: 50px;
+  }
+  
+  .image-left .text-container {
+    order: 2;
+    padding-left: 20px;
+  }
+  
+  .image-left .image-container {
+    order: 1;
+  }
+  
+  .image-right .text-container {
+    order: 1;
+    padding-right: 20px;
+  }
+  
+  .image-right .image-container {
+    order: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .text-container {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Style for Recrutement steps */
+ /* Container vertical pour les étapes de recrutement */
+/* Container vertical pour les étapes de recrutement */
+.recruitment-steps-container {
+    display: flex;
+    flex-direction: column; /* Affichage vertical */
+    align-items: center; /* Centre les cartes */
+    gap: 15px; /* Réduit l'espacement entre les cartes */
+    margin-top: 20px;
+  }
+  
+  .recruitment-step {
+    display: flex;
+    align-items: center; /* Aligne le contenu des cartes verticalement */
+    justify-content: flex-start;
+    background: #f8fafc; /* Couleur sobre et minimaliste */
+    border: 1px solid #dcdfe3; /* Bordure légère pour délimiter */
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: left; /* Alignement du texte */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Ombre discrète */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 400px; /* Ajuste à la largeur typique de la photo */
+    height: auto; /* Hauteur dynamique selon le contenu */
+  }
+  
+  .recruitment-step:hover {
+    transform: scale(1.02); /* Légère mise en avant au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Accentue l'ombre */
+  }
+  
+  .recruitment-step span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #3498db; /* Couleur bleue pour les numéros */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    margin-right: 10px; /* Espacement entre le numéro et le texte */
+    flex-shrink: 0; /* Empêche la déformation du cercle */
+  }
+  
+  .recruitment-step p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    flex-grow: 1; /* Le texte prend tout l'espace restant */
+  }
+  
+  
+  /* Style for Accompagnement - Consulting process */
+  .process-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Étire toutes les étapes à la même hauteur */
+    margin-top: 20px;
+  }
+  
+  .process-step {
+    flex: 1; /* Toutes les étapes ont la même largeur */
+    display: flex; /* Ajout pour un alignement interne flexible */
+    flex-direction: column;
+    justify-content: center; /* Aligne le contenu verticalement au centre */
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 0 10px; /* Espace uniforme entre chaque étape */
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    min-height: 200px; /* Fixe une hauteur minimale pour uniformiser */
+  }
+  
+  .process-step h3 {
+    color: #011538;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .process-step p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Flèches entre les étapes */
+  .process-step:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #3498db;
+  }
+  

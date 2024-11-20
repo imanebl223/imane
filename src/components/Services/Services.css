@@ -1,0 +1,102 @@
+/* Styles du conteneur des services */
+.services-container {
+    background-color: #002147; /* Bleu */
+    padding: 40px 20px; /* Augmentez le padding pour créer un effet de débordement */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 40px; /* Espace en bas pour la section suivante */
+}
+
+/* Carte du service */
+.service-card {
+    flex: 0 0 calc(25% - 40px); /* Quatre cartes par ligne, plus petite largeur */
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden; /* Masque le débordement */
+}
+
+/* Effet au survol de la carte */
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Image du service */
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Titre du service */
+.service-title {
+    color: #002147;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Détails masqués par défaut */
+.service-details {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+/* Affichage des détails au survol */
+.service-card:hover .service-details {
+    opacity: 1;
+    max-height: 200px; /* Ajustez en fonction de la taille du contenu */
+}
+
+/* Bouton dans la carte */
+.service-button {
+    background-color: #FFCC00;
+    color: #002147;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border:none;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.service-button:hover {
+    background-color: #e6b800;
+}
+
+/* Design responsive */
+@media (max-width: 992px) {
+    .service-card {
+      flex: 0 0 calc(50% - 20px); /* Deux cartes par ligne */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+      flex: 0 0 100%; /* Une carte par ligne */
+    }
+}
+.services-section {
+    margin-bottom: 40px; /* Adjust this value as needed */
+  }
+  

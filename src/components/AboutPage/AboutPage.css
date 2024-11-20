@@ -1,0 +1,108 @@
+/* Section héro */
+.hero-about {
+    inline-size: 100%;
+    min-height: 71vh;
+    background: linear-gradient(rgba(1, 21, 56, 0.7), rgba(1, 21, 56, 0.7)), url('../../assets/programs-1.jpg');
+    background-size: cover;
+    background-position: center top; /* Positionner l'image en haut au centre */
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    padding: 20px; /* Ajoute un peu de padding pour améliorer l'apparence sur les petits écrans */
+    transition: background-size 0.3s ease; /* Pour les effets de zoom */
+}
+
+/* Effet de zoom sur le fond lors du survol de la section héro */
+.hero-about:hover {
+    background-size: 110%; /* Augmente la taille de l'image */
+}
+
+/* Titre de la section héro */
+.hero-text h1 {
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center; /* Centrer le texte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour améliorer la lisibilité */
+}
+
+/* Adaptation pour les écrans plus petits */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 36px; /* Taille du texte plus petite pour les mobiles */
+    }
+}
+
+
+/* Barre de navigation */
+.info-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow-x: auto; /* Permet de faire défiler horizontalement si la barre est trop large */
+}
+
+/* Masquer la barre de défilement */
+.info-bar::-webkit-scrollbar {
+    display: none; /* Masquer la barre de défilement pour un aspect plus épuré */
+}
+
+/* Style des liens dans la barre de navigation */
+.info-link {
+    position: relative;
+    color: #002147;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Empêche le retour à la ligne des liens pour garder la structure */
+}
+
+/* Effet de surlignement animé sous les liens */
+.info-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: #FFCC00;
+    transition: width 0.3s ease;
+}
+
+/* Surlignage des liens au survol */
+.info-link:hover::after {
+    width: 100%; /* Lien surligné au survol */
+}
+
+/* Surlignage des liens actifs */
+.info-link.active::after {
+    width: 100%; /* Lien surligné lorsqu'il est actif */
+}
+
+/* Changement de couleur des liens au survol */
+.info-link:hover {
+    color: #FFCC00; /* Texte jaune au survol */
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5); /* Ombre lumineuse pour plus d'effet */
+}
+
+/* Contenu de la page */
+.container {
+    padding: 20px;
+}
+
+/* Section des liens (active sur la section active) */
+.info-bar a.active {
+    font-weight: bold;
+    color: #FFCC00; /* Lien actif en couleur jaune */
+}
